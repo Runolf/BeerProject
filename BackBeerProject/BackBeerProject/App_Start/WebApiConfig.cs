@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace BackBeerProject
@@ -13,6 +11,16 @@ namespace BackBeerProject
 
             // Itinéraires de l'API Web
             config.MapHttpAttributeRoutes();
+            config.EnableCors(); // enable cross origin
+
+            /*
+               For more info: 
+                    https://stackoverflow.com/questions/9847564/how-do-i-get-asp-net-web-api-to-return-json-instead-of-xml-using-chrome
+            */
+            config.Formatters.JsonFormatter.SupportedMediaTypes // enable json format
+    .Add(new MediaTypeHeaderValue("text/html"));
+
+
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
