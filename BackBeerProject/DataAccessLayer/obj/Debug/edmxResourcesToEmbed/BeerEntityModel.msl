@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BeerProjectModelStoreContainer" CdmEntityContainer="BeerProjectEntities">
+    <EntitySetMapping Name="Beer">
+      <EntityTypeMapping TypeName="BeerProjectModel.Beer">
+        <MappingFragment StoreEntitySet="Beer">
+          <ScalarProperty Name="BeerID" ColumnName="BeerID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Brewery" ColumnName="Brewery" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Fermentation" ColumnName="Fermentation" />
+          <ScalarProperty Name="SpecialCat" ColumnName="SpecialCat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="BeerProjectModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Pseudo" ColumnName="Pseudo" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
