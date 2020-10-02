@@ -11,7 +11,7 @@ namespace BackBeerProject
 
             // Itinéraires de l'API Web
             config.MapHttpAttributeRoutes();
-            config.EnableCors(); // enable cross origin
+            config.EnableCors(); // enable cross origin. Download by using : Install-Package Microsoft.AspNet.WebApi.Cors
 
             /*
                For more info: 
