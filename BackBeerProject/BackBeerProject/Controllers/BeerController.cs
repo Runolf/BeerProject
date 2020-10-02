@@ -1,6 +1,9 @@
 ﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -18,6 +21,24 @@ namespace BackBeerProject.Controllers
         public Beer Get(int ID)
         {
             return _context.Beer.FirstOrDefault(e => e.BeerID == ID);
+        }
+
+        public HttpResponseMessage Post([FromBody] Beer B)
+        {
+            try
+            {
+                _context.Beer.Add(B);
+                _context.SaveChanges();
+
+                HttpResponseMessage message = Request.CreateResponse(HttpStatusCode.Created, B);
+                message.Headers.Location = new Uri(Request.RequestUri + B.BeerID.ToString());
+                return message;
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
         }
     }
 }

@@ -101,3 +101,6 @@ C:\Users\Runolf\Documents\GitHub\BeerProject\BackBeerProject\BackBeerProject\obj
 C:\Users\Runolf\Documents\GitHub\BeerProject\BackBeerProject\BackBeerProject\obj\Debug\BackBeerProject.pdb
 C:\Users\Runolf\Documents\GitHub\BeerProject\BackBeerProject\BackBeerProject\bin\EntityFramework.SqlServer.dll
 C:\Users\Runolf\Documents\GitHub\BeerProject\BackBeerProject\BackBeerProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Runolf\Documents\GitHub\BeerProject\BackBeerProject\BackBeerProject\bin\System.Web.Cors.dll
+C:\Users\Runolf\Documents\GitHub\BeerProject\BackBeerProject\BackBeerProject\bin\System.Web.Http.Cors.dll
+C:\Users\Runolf\Documents\GitHub\BeerProject\BackBeerProject\BackBeerProject\bin\System.Web.Http.Cors.xml
