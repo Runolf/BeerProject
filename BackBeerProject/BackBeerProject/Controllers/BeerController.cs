@@ -21,8 +21,9 @@ namespace BackBeerProject.Controllers
         public Beer Get(int ID)
         {
             return _context.Beer.FirstOrDefault(e => e.BeerID == ID);
-        }
+        }   
 
+        [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
         public HttpResponseMessage Post([FromBody] Beer B)
         {
             try
