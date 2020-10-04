@@ -5,7 +5,7 @@ export default class TodoApp extends Component {
       super();
       this.state = {
         beers:[],
-        isLoaded: true,
+        isLoaded: false,
         currentPage: 1,
         beersPerPage: 3
       };
