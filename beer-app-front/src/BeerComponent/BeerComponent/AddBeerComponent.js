@@ -38,24 +38,51 @@ export default class AddBeerComponent extends Component{
     }
 
     render(){
+        const style = {
+            width: "25%",
+            position: "relative",
+            left: "37%",
+            top: "50px"
+        }
         return(
             <div>
-                <form onSubmit={e => this.postData(e)}>
-                   Name: <input type="text" value={this.state.Name} name="Name" onChange={(data) => {this.setState({Name:data.target.value})}}/>
-                    <br />
-                    Brewery: <input type="text" value={this.state.Brewery} name="Brewery" onChange={(data) => {this.setState({Brewery:data.target.value})}}/>
-                    <br />
-                    Country: <input type="text" value={this.state.Country} name="Country" onChange={(data) => {this.setState({Country:data.target.value})}}/>
-                    <br />
-                    Degree: <input type="text" value={this.state.Degree} name="Degree" onChange={(data) => {this.setState({Degree:data.target.value})}}/>
-                    <br />
-                    Color: <input type="text" value={this.state.Color} name="Color" onChange={(data) => {this.setState({Color:data.target.value})}}/>
-                    <br />
-                    Fermentation: <input type="text" value={this.state.Fermentation} name="Fermentation" onChange={(data) => {this.setState({Fermentation:data.target.value})}}/>
-                    <br />
-                    Special Category: <input type="text" value={this.state.SpecialCat} name="SpecialCat" onChange={(data) => {this.setState({SpecialCat:data.target.value})}}/>
-                    <br />
-                    <button type="submit" /*onClick={this.postData.bind(this)}*/ >Add this beer</button>
+                <form onSubmit={e => this.postData(e)} style={style}>
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" className="form-control" value={this.state.Name} id="Name" name="Name" onChange={(data) => {this.setState({Name:data.target.value})}}/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Brewery">Brewery</label>
+                        <input type="text" className="form-control" value={this.state.Brewery} id="Brewery" name="Brewery" onChange={(data) => {this.setState({Brewery:data.target.value})}}/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Country">Country</label>
+                        <input type="text" className="form-control" value={this.state.Country} id="Country" name="Country" onChange={(data) => {this.setState({Country:data.target.value})}}/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Degree">Degree</label>
+                        <input type="text" className="form-control" value={this.state.Degree} id="Degree" name="Degree" onChange={(data) => {this.setState({Degree:data.target.value})}}/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Color">Color</label>
+                        <input type="text" className="form-control" value={this.state.Color} id="Color" name="Color" onChange={(data) => {this.setState({Color:data.target.value})}}/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Fermentation">Fermentation</label>
+                        <input type="text" className="form-control" value={this.state.Fermentation} id="Fermentation" name="Fermentation" onChange={(data) => {this.setState({Fermentation:data.target.value})}}/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="SpecialCat">Special Category</label>
+                        <input type="text" className="form-control" value={this.state.SpecialCat} id="SpecialCat" name="SpecialCat" onChange={(data) => {this.setState({SpecialCat:data.target.value})}}/>
+                    </div>
+                   
+                    <button type="submit" className="btn btn-dark" /*onClick={this.postData.bind(this)}*/ >Add this beer</button>
                 </form>
             </div>
         );

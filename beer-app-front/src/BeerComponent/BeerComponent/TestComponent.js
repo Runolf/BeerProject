@@ -45,7 +45,9 @@ export default class TodoApp extends Component {
         }
 
         const styleBarNav = {
-
+            position: "relative",
+            left: "20px",
+            top: "500px"
         }
 
       const { beers, currentPage, beersPerPage } = this.state;
@@ -57,7 +59,7 @@ export default class TodoApp extends Component {
 
       const renderbeers = currentbeers.map((beer, index) => {
         return  <div className="col mb-4" key={index}>
-                    <div className="card shadow p-3 mb-5 bg-white rounded" style={style2}>
+                    <div className="card" style={style2}>
                         <div className="card-body txt-card">
                                 <h5 className="card-title">{beer.Name}</h5>
                                 <p className="card-text">Brewery: {beer.Brewery}</p>
@@ -84,8 +86,7 @@ export default class TodoApp extends Component {
 
       const renderPageNumbers = pageNumbers.map(number => {
         return (
-          <li 
-            className="page-item page-link"
+          <li
             key={number}
             id={number}
             onClick={this.handleClick}
@@ -102,7 +103,7 @@ export default class TodoApp extends Component {
           </div>
 
 
-          <ul id="page-numbers" style={styleBarNav} className="pagination justify-content-center fixed-bottom">
+          <ul id="page-numbers" style={styleBarNav}>
             {renderPageNumbers}
           </ul>
         </div>
