@@ -10,8 +10,7 @@
 namespace DataAccessLayer
 {
     using System;
-    using System.Collections.Generic;
-    
+
     public partial class Beer
     {
         public int BeerID { get; set; }

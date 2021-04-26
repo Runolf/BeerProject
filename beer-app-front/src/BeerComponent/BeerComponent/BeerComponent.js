@@ -56,8 +56,11 @@ export default class TodoApp extends Component {
       const currentbeers = beers.slice(indexOfFirstTodo, indexOfLastTodo);
 
       const renderbeers = currentbeers.map((beer, index) => {
+
         return  <div className="col mb-4" key={index}>
+
                     <div className="card shadow p-3 mb-5 bg-white rounded" style={style2}>
+                      
                         <div className="card-body txt-card">
                                 <h5 className="card-title">{beer.Name}</h5>
                                 <p className="card-text">Brewery: {beer.Brewery}</p>
@@ -71,6 +74,7 @@ export default class TodoApp extends Component {
                                     <p className="card-text">Special Category: no special category</p>
                                 }
                         </div>
+                    
                     </div>
                 </div>;
       });
